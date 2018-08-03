@@ -58,7 +58,14 @@ public class GoogleHOmePage extends Base_Page {
 	}
 	public  void clickOnSearchBtn() {
 		System.out.println("clicking on search btn ");
-		driver.findElement(By.name("btnk")).click();
+		try {driver.findElement(By.name("btnk")).click();}
+		catch (Exception e) {
+			System.out.println("btn is hidden behind the option provided");
+			driver.findElement(By.cssSelector("#sbtc > div.gstl_0.sbdd_a > div:nth-child(2) > div.sbdd_b > div > ul > li:nth-child(11) > div > span:nth-child(1) > span > input")).click();
+		}
+		
+	    
+		
 	}
 	public void validationOfResultProvidedAfterSearch() {
 		//to be implemented in future

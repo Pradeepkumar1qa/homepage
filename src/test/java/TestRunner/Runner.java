@@ -6,8 +6,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/resources",
-                   glue="stepDefinition")
+@CucumberOptions(features="src/test/java/resources/Googlesearch.feature",
+                   glue="stepDefinition/HomepageStep")
 public class Runner {
 
 }
